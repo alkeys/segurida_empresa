@@ -26,21 +26,4 @@ class ApplicationTests {
 	@Autowired
 	UsuarioService usuarioService;
 
-	@Test
-	void crearUsuarioAdmin() {
-		UsuarioDto usuarioDto = new UsuarioDto();
-		usuarioDto.setUsername("admin");
-		usuarioDto.setPassword("admin");
-		usuarioDto.setIdRol(UUID.fromString("a6ebfc80-c552-4ffe-b360-026119880cdc"));
-		usuarioDto.setEstado("ACTIVO");
-		
-		Usuario usuario = Usuario.builder()
-				.username(usuarioDto.getUsername())
-				.password(usuarioDto.getPassword())
-				.rol(rolRepository.findById(usuarioDto.getIdRol()).orElseThrow())
-				.estado(usuarioDto.getEstado())
-				.build();
-		System.out.println(usuarioService.save(usuario));
-	}
-
 }
