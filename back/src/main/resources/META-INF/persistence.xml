@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence           http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+  <persistence-unit name="com.alex.com_1.0_jar_0.0.1-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.alex.com10.models.DetallesCompras</class>
+    <class>com.alex.com10.models.Turnos</class>
+    <class>com.alex.com10.models.Usuarios</class>
+    <class>com.alex.com10.models.Vacaciones</class>
+    <class>com.alex.com10.models.TiposArmas</class>
+    <class>com.alex.com10.models.Asignaciones</class>
+    <class>com.alex.com10.models.InventarioExistencias</class>
+    <class>com.alex.com10.models.Sucursales</class>
+    <class>com.alex.com10.models.Supervisiones</class>
+    <class>com.alex.com10.models.VArmasAsignadas</class>
+    <class>com.alex.com10.models.VInventarioDisponible</class>
+    <class>com.alex.com10.models.VEquiposAsignados</class>
+    <class>com.alex.com10.models.AsignacionesVehiculos</class>
+    <class>com.alex.com10.models.AsignacionesArmas</class>
+    <class>com.alex.com10.models.VGuardiasPorCliente</class>
+    <class>com.alex.com10.models.VGuardiasActivos</class>
+    <class>com.alex.com10.models.Permisos</class>
+    <class>com.alex.com10.models.Horarios</class>
+    <class>com.alex.com10.models.Incidencias</class>
+    <class>com.alex.com10.models.Clientes</class>
+    <class>com.alex.com10.models.EstadosLaborales</class>
+    <class>com.alex.com10.models.Armas</class>
+    <class>com.alex.com10.models.Departamentos</class>
+    <class>com.alex.com10.models.Checkpoints</class>
+    <class>com.alex.com10.models.MantenimientoArmas</class>
+    <class>com.alex.com10.models.VGuardiasMasAnotaciones</class>
+    <class>com.alex.com10.models.Cargos</class>
+    <class>com.alex.com10.models.PermisosPersonales</class>
+    <class>com.alex.com10.models.BitacoraVehiculos</class>
+    <class>com.alex.com10.models.Empleados</class>
+    <class>com.alex.com10.models.VIncidenciasAbiertas</class>
+    <class>com.alex.com10.models.Vehiculos</class>
+    <class>com.alex.com10.models.Anotaciones</class>
+    <class>com.alex.com10.models.SalidasInventario</class>
+    <class>com.alex.com10.models.Compras</class>
+    <class>com.alex.com10.models.LogAuditoria</class>
+    <class>com.alex.com10.models.CambiosTurno</class>
+    <class>com.alex.com10.models.Calibres</class>
+    <class>com.alex.com10.models.Asistencia</class>
+    <class>com.alex.com10.models.Proveedores</class>
+    <class>com.alex.com10.models.HistorialLaboral</class>
+    <class>com.alex.com10.models.VSupervisionesDelDia</class>
+    <class>com.alex.com10.models.Rondas</class>
+    <class>com.alex.com10.models.Municiones</class>
+    <class>com.alex.com10.models.Incapacidades</class>
+    <class>com.alex.com10.models.EvidenciasIncidencias</class>
+    <class>com.alex.com10.models.Puestos</class>
+    <class>com.alex.com10.models.ItemsInventario</class>
+    <class>com.alex.com10.models.MantenimientoVehiculos</class>
+    <class>com.alex.com10.models.FlywaySchemaHistory</class>
+    <class>com.alex.com10.models.TiposIncidencias</class>
+    <class>com.alex.com10.models.RegistroCheckpoints</class>
+    <class>com.alex.com10.models.TiposEquipamiento</class>
+    <class>com.alex.com10.models.Equipamiento</class>
+    <class>com.alex.com10.models.Roles</class>
+    <class>com.alex.com10.models.HistorialArmas</class>
+    <class>com.alex.com10.models.AsignacionesEquipamiento</class>
+    <class>com.alex.com10.models.Menus</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:32778/postgres-db"/>
+      <property name="javax.persistence.jdbc.user" value="admin"/>
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="admin"/>
+    </properties>
+  </persistence-unit>
+</persistence>

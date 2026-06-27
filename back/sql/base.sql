@@ -1,0 +1,19 @@
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+CREATE TABLE roles (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4 (),
+    nombre VARCHAR(50) UNIQUE NOT NULL,
+    descripcion TEXT,
+    estado VARCHAR(20) DEFAULT 'ACTIVO'
+);
+
+CREATE TABLE usuarios (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4 (),
+    username VARCHAR(50) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    rol_id UUID NOT NULL REFERENCES roles (id) ON DELETE RESTRICT,
+    estado VARCHAR(20) DEFAULT 'ACTIVO',
+    ultimo_login TIMESTAMPTZ,
+    created_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
+);
