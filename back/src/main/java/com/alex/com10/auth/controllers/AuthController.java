@@ -33,7 +33,7 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<AuthResponseDto> login(@Valid @RequestBody LoginRequestDto request) {
+    public ResponseEntity<AuthResponseDto> login(@Valid @RequestBody LoginRequestDto request, jakarta.servlet.http.HttpServletResponse response) {
         Usuario usuario = usuarioRepository.findByUsername(request.getUsername())
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Usuario o contraseña incorrectos"));
 
@@ -47,6 +47,14 @@ public class AuthController {
 
         // Generar token JWT
         String token = jwtService.generateToken(usuario.getUsername(), List.of(roleName));
+
+        // Crear la cookie con el token JWT
+        jakarta.servlet.http.Cookie cookie = new jakarta.servlet.http.Cookie("jwt", token);
+        cookie.setHttpOnly(true);
+        cookie.setSecure(false); // Cambiar a true si se utiliza HTTPS en producción
+        cookie.setPath("/");
+        cookie.setMaxAge(86400); // 1 día (86400 segundos)
+        response.addCookie(cookie);
 
         return ResponseEntity.ok(new AuthResponseDto(token, usuario.getUsername(), roleName));
     }

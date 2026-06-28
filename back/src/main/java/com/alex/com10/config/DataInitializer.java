@@ -1,17 +1,11 @@
 package com.alex.com10.config;
 
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import com.alex.com10.auth.models.Role;
-import com.alex.com10.auth.models.Usuario;
-import com.alex.com10.auth.repository.RoleRepository;
-import com.alex.com10.auth.repository.UsuarioRepository;
-import com.alex.com10.utils.HashGenerate;
 
 @Configuration
 public class DataInitializer {
+
+    /*
 
     @Bean
     CommandLineRunner initDatabase(RoleRepository roleRepo, UsuarioRepository userRepo, InitializerHelper helper) {
@@ -57,4 +51,5 @@ class InitializerHelper {
             System.out.println(">>> Usuario administrador inicial creado: admin / admin");
         }
     }
+        */
 }
